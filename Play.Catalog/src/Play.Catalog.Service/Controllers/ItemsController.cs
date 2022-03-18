@@ -106,7 +106,8 @@ namespace Play.Catalog.Service.Controllers
                 return NotFound();
             }
 
-            await itemsRepository.RemoveAsync(item.Id);
+            await itemsRepository.DeleteAsync(item.Id);
+
             return NoContent();
         }
     }

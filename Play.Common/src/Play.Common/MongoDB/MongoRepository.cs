@@ -59,7 +59,7 @@ namespace Play.Common.MongoDB
             await dbCollection.ReplaceOneAsync(filter, entity);
         }
 
-        public async Task RemoveAsync(Guid id)
+        public async Task DeleteAsync(Guid id)
         {
             FilterDefinition<T> filter = filterBuilder.Eq(entity => entity.Id, id);
             await dbCollection.DeleteOneAsync(filter);
